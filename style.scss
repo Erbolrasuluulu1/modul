@@ -1,0 +1,1401 @@
+@import "mixin";
+@import "reset";
+@import "variabels";
+
+
+#header {
+  padding: 30px 0;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  backdrop-filter: blur(3px);
+
+  .header {
+    @include between();
+
+    h1 {
+      font-weight: 700;
+      font-size: 44px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: $w;
+    }
+
+    &--nav {
+      a {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: $w;
+        margin: 0 20px;
+      }
+    }
+
+    &--login {
+      @include center();
+
+      a {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        color: $w;
+        margin: 0 20px;
+      }
+
+      h2 {
+        color: $w;
+      }
+    }
+  }
+}
+
+#hero {
+  position: relative;
+  background: $k;
+  padding: 50px 0;
+
+  .hero {
+    @include start();
+      &--bar {
+        @include center();
+        transform: rotate(271deg);
+        margin-left: -95px;
+
+        h1 {
+          font-family: 'Open Sans', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          letter-spacing: 0.04em;
+          color: $w;
+          margin-right: 40px;
+        }
+
+        h2 {
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+          letter-spacing: 0.04em;
+          color: $w;
+        }
+
+      }
+
+      &--kay {
+        display: flex;
+
+        &__title {
+          padding: 70px 50px;
+
+          h2 {
+            font-family: "Cormorant Upright", serif;
+            font-weight: 700;
+            font-size: 23px;
+            letter-spacing: 0.04em;
+            text-transform: capitalize;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: $w;
+          }
+
+          h1 {
+            font-family: 'Cormorant Upright', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 90px;
+            line-height: 130%;
+            letter-spacing: 0.04em;
+            text-transform: capitalize;
+            color: $y;
+          }
+
+          p {
+            width: 453px;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: $a;
+            padding: 30px 0;
+          }
+
+          button {
+            @include column();
+            width: 157px;
+            height: 44px;
+            background: $y;
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #0C0B08;
+          }
+
+        }
+
+        &__images {
+          margin-left: 70px;
+
+          &--yellow {
+            width: 335px;
+            height: 300px;
+            background: $y;
+            position: absolute;
+            top: 30px;
+            right: 276px;
+          }
+
+          &--yellow1 {
+            width: 335px;
+            height: 300px;
+            background: $y;
+            position: absolute;
+            top: 358px;
+            right: 516px;
+          }
+
+          &--lim {
+            position: relative;
+            width: 519px;
+            height: 588px;
+          }
+
+        }
+      }
+
+      &--sroll {
+        &__line {
+          position: absolute;
+          top: 648px;
+          right: 20px;
+          width: 61px;
+          height: 0;
+          border: 1px solid $y;
+          transform: rotate(-90deg);
+        }
+
+        h6 {
+          position: absolute;
+          top: 710px;
+          right: 26px;
+          font-family: 'Cormorant Upright', sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: #DCCA87;
+        }
+      }
+    }
+
+    h4 {
+      padding-top: 70px;
+      @include center();
+      font-family: 'Cormorant Upright', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      text-transform: capitalize;
+      font-feature-settings: 'tnum' on, 'lnum' on;
+      color: $f;
+
+      ion-icon {
+        color: $y;
+      }
+    }
+  }
+
+  #about {
+    background: url("/img/about.svg") no-repeat center/cover;
+    min-height: 100vh;
+
+    h1 {
+      @include center();
+      font-family: "Cormorant Upright", serif;
+      font-size: 30em;
+      padding: 105px 0;
+      color: #272727;
+
+    }
+
+    .about {
+      position: relative;
+
+      &--center {
+        position: absolute;
+        bottom: 31px;
+        left: 57px;
+        @include center();
+
+        &__title {
+          @include end();
+
+          h2 {
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 600;
+            font-size: 64px;
+            text-align: right;
+            text-transform: capitalize;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: $y;
+          }
+
+          p {
+            width: 523px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 175%;
+            text-align: right;
+            letter-spacing: 0.04em;
+            color: $a;
+            padding: 34px 0;
+          }
+
+          button {
+            @include center();
+            width: 141px;
+            height: 44px;
+            background: #DCCA87;
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: #0C0C0C;
+
+          }
+        }
+
+        img {
+          margin: 0 50px;
+        }
+
+        &__title1 {
+          h3 {
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 600;
+            font-size: 64px;
+            letter-spacing: 0.03em;
+            text-transform: capitalize;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: $y;
+          }
+
+          p {
+            width: 523px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 175%;
+            letter-spacing: 0.04em;
+            color: $a;
+            padding: 30px 0;
+          }
+
+          button {
+            @include center();
+            width: 141px;
+            height: 44px;
+            background: #DCCA87;
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: #0C0C0C;
+
+          }
+        }
+      }
+    }
+  }
+
+  #book {
+    background: $k;
+
+    .book {
+      padding: 100px 0;
+      @include center();
+      position: relative;
+
+      &--block {
+        @include column();
+        width: 1000px;
+        height: 450px;
+        background: $k;
+        border: 1px solid rgba(220, 202, 135, 0.2);
+        box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+
+        &__logo {
+          position: absolute;
+          top: -27px;
+          right: -37px;
+        }
+
+        &__title {
+          @include column();
+
+          h4 {
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 700;
+            font-size: 23px;
+            text-transform: capitalize;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: #FFFFFF;
+          }
+
+          h1 {
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 600;
+            font-size: 64px;
+            text-align: center;
+            letter-spacing: 0.03em;
+            text-transform: capitalize;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: $y;
+          }
+        }
+
+        &__inputs {
+          margin: 50px 0;
+
+          select {
+            width: 300px;
+            height: 50px;
+            background: transparent;
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            text-transform: capitalize;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: $a;
+            outline: none;
+          }
+
+          input {
+            border: 1px solid $a;
+            width: 300px;
+            height: 50px;
+            margin: 0 10px;
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            text-transform: capitalize;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: $a;
+            background: transparent;
+            outline: none;
+          }
+
+        }
+
+        button {
+          width: 133px;
+          height: 44px;
+          background: #DCCA87;
+          border: 1px solid #DCCA87;
+          font-family: 'Cormorant Upright', sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          letter-spacing: 0.04em;
+          color: $k;
+
+        }
+
+      }
+    }
+  }
+
+  #menu {
+    background: url("/img/Mask Group.svg") no-repeat center/cover;
+    min-height: 100vh;
+
+    .menu {
+      &--title {
+        margin-top: 30px;
+
+        h1 {
+          font-family: 'Cormorant Upright', sans-serif;
+          font-weight: 600;
+          font-size: 64px;
+          letter-spacing: 0.03em;
+          text-transform: capitalize;
+          font-feature-settings: 'tnum' on, 'lnum' on;
+          color: $w;
+          padding: 30px 0;
+        }
+      }
+    }
+  }
+
+  #today {
+    background: $k;
+    padding: 100px 0;
+
+    .today {
+      &--title {
+        padding-bottom: 40px;
+        @include column();
+
+        h5 {
+          font-family: 'Cormorant Upright', sans-serif;
+          padding-bottom: 10px;
+          font-weight: 700;
+          font-size: 23px;
+          letter-spacing: 0.04em;
+          text-transform: capitalize;
+          color: $w;
+        }
+
+        h1 {
+          font-family: 'Cormorant Upright', sans-serif;
+          font-weight: 600;
+          font-size: 64px;
+          text-align: center;
+          letter-spacing: 0.04em;
+          text-transform: capitalize;
+          color: $y;
+        }
+      }
+
+      &--btn {
+        @include btnend();
+
+        &__block {
+          width: 412px;
+          height: 596px;
+          background: transparent;
+
+          h1 {
+            font-family: 'Cormorant Upright', sans-serif;
+            text-align: center;
+            font-weight: 600;
+            font-size: 45px;
+            letter-spacing: 0.04em;
+            color: $w;
+          }
+
+          &--text {
+            .h4-2 {
+              padding-right: 65px;
+            }
+
+            .h4-3 {
+              padding-right: 30px;
+            }
+
+            .h4-4 {
+              padding-right: 117px;
+            }
+
+            .h4-5 {
+              padding-right: 50px;
+            }
+
+            .h4-6 {
+              padding-right: 120px;
+            }
+
+            padding-top: 40px;
+            display: flex;
+
+            .h4 {
+              padding-right: 50px;
+            }
+
+            h4 {
+              font-family: 'Cormorant Upright', sans-serif;
+              padding-right: 10px;
+              font-weight: 700;
+              font-size: 23px;
+              letter-spacing: 0.04em;
+              color: $y;
+            }
+
+            &__fg {
+              font-family: 'Cormorant Upright', sans-serif;
+              margin: 15px;
+              width: 119px;
+              height: 1px;
+              background: $fa;
+
+            }
+
+            h5 {
+              font-family: 'Cormorant Upright', sans-serif;
+              padding-left: 10px;
+              font-weight: 700;
+              font-size: 23px;
+              color: $w;
+            }
+          }
+
+          p {
+            padding-top: 10px;
+
+            span {
+              padding: 0 10px;
+            }
+
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: $a;
+          }
+        }
+
+        img {
+          margin: 0 40px;
+        }
+      }
+    }
+
+    .btn {
+      @include center();
+
+      button {
+        margin: 30px 0;
+        width: 136px;
+        height: 44px;
+        background: $y;
+        font-family: 'Cormorant Upright', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.04em;
+        color: $k;
+      }
+    }
+  }
+
+  //#what {
+  //  background: url("/img/Mars.svg") no-repeat center/cover;
+  //  z-index: -1;
+  //
+  //  min-height: 100vh;
+  //  padding-top: 70px;
+  //
+  //  .what {
+  //    //padding-top: 80px;
+  //    @include around();
+  //
+  //    &--images {
+  //      position: relative;
+  //      &__ybloc {
+  //        position: absolute;
+  //        width: 335px;
+  //        height: 335px;
+  //        top: 0;
+  //        right: 0;
+  //        background: $y;
+  //
+  //      &__ybloc1 {
+  //        position: absolute;
+  //        bottom: 0;
+  //        left: 0;
+  //        width: 335px;
+  //        height: 335px;
+  //        background: #DCCA87;
+  //      }
+  //
+  //      &__kich {
+  //        position: absolute;
+  //        width: 444px;
+  //        height: 444px;
+  //      }
+  //      }
+  //
+  //    }
+  //
+  //    &--title {
+  //      right: 20px;
+  //      top: 20px;
+  //
+  //      h6 {
+  //        font-family: 'Cormorant Upright', sans-serif;
+  //        font-style: normal;
+  //        font-weight: 700;
+  //        font-size: 23px;
+  //        line-height: 130%;
+  //        letter-spacing: 0.04em;
+  //        text-transform: capitalize;
+  //        font-feature-settings: 'tnum' on, 'lnum' on;
+  //        color: #FFFFFF;
+  //      }
+  //
+  //      h1 {
+  //        font-family: 'Cormorant Upright', sans-serif;
+  //        font-weight: 600;
+  //        font-size: 64px;
+  //        line-height: 130%;
+  //        letter-spacing: 0.03em;
+  //        text-transform: capitalize;
+  //        font-feature-settings: 'tnum' on, 'lnum' on;
+  //        color: $y;
+  //        margin-bottom: 30px;
+  //      }
+  //
+  //      p {
+  //        font-family: 'Open Sans', sans-serif;
+  //        font-weight: 400;
+  //        font-size: 16px;
+  //        line-height: 175%;
+  //        letter-spacing: 0.04em;
+  //        color: $a;
+  //        width: 570px;
+  //      }
+  //
+  //      &__kevin {
+  //        width: 235px;
+  //        height: 83px;
+  //        padding-right: 40px;
+  //      }
+  //
+  //      h5 {
+  //        img {
+  //          width: 47px;
+  //          height: 40px;
+  //        }
+  //
+  //        font-family: 'Open Sans', sans-serif;
+  //        font-size: 16px;
+  //        line-height: 175%;
+  //        letter-spacing: 0.04em;
+  //        color: $a;
+  //
+  //      }
+  //
+  //      h2 {
+  //        margin-top: 50px;
+  //        margin-bottom: 10px;
+  //        font-family: 'Cormorant Upright', sans-serif;
+  //        font-weight: 400;
+  //        font-size: 32px;
+  //        line-height: 130%;
+  //        letter-spacing: 0.04em;
+  //        text-transform: capitalize;
+  //        font-feature-settings: 'tnum' on, 'lnum' on;
+  //        color: $y;
+  //      }
+  //
+  //      h3 {
+  //        font-family: 'Open Sans', sans-serif;
+  //        font-weight: 400;
+  //        font-size: 16px;
+  //        line-height: 175%;
+  //        letter-spacing: 0.04em;
+  //        color: $a;
+  //      }
+  //
+  //      h4 {
+  //        font-style: normal;
+  //        font-weight: 400;
+  //        font-size: 64px;
+  //        line-height: 130%;
+  //        letter-spacing: 0.04em;
+  //        color: $a;
+  //      }
+  //    }
+  //
+  //  }
+  //}
+
+  #happy {
+    background: $k;
+    padding: 100px 0;
+
+    .happy {
+      &--title {
+        @include column();
+
+        h1 {
+          font-family: 'Cormorant Upright', sans-serif;
+          font-weight: 700;
+          font-size: 23px;
+          letter-spacing: 0.04em;
+          text-transform: capitalize;
+          font-feature-settings: 'tnum' on, 'lnum' on;
+          color: $w;
+        }
+
+        h2 {
+          font-family: 'Cormorant Upright', sans-serif;
+          font-weight: 600;
+          font-size: 64px;
+          letter-spacing: 0.03em;
+          text-transform: capitalize;
+          font-feature-settings: 'tnum' on, 'lnum' on;
+          color: $y;
+        }
+      }
+
+      &--wade {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &__waren {
+          position: relative;
+          @include center();
+          margin: 20px 0;
+
+          &--cav {
+            position: absolute;
+            left: 150px;
+            bottom: -9px;
+          }
+
+          &--title {
+            margin-left: 20px;
+
+            p {
+              font-family: 'Open Sans', sans-serif;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 175%;
+              letter-spacing: 0.04em;
+              color: $a;
+              width: 412px;
+            }
+
+            h1 {
+              font-family: 'Cormorant Upright', sans-serif;
+              font-weight: 400;
+              font-size: 32px;
+              letter-spacing: 0.04em;
+              text-transform: capitalize;
+              font-feature-settings: 'tnum' on, 'lnum' on;
+              color: $y;
+              margin: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #table {
+    background: url("/img/table.jpg") no-repeat center/cover;
+    min-height: 100vh;
+
+    .table {
+      display: flex;
+      img {
+        margin: 100px 50px;
+      }
+
+      .table--krug {
+        @include center();
+        margin-bottom: -175px;
+        margin-left: 400px;
+
+        ion-icon {
+          color: $w;
+          font-size: 30px;
+          padding: 40px 40px;
+          border-radius: 50%;
+          border: 1px solid #DCCA87;
+        }
+      }
+    }
+  }
+
+  #our {
+    background: url("/img/kuro.svg") no-repeat center/cover;
+    min-height: 80vh;
+    padding: 90px 0;
+
+    .our {
+      @include evenly();
+
+      &--left {
+        @include fcolumn();
+
+        &__title {
+          h1 {
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 700;
+            font-size: 23px;
+            letter-spacing: 0.04em;
+            text-transform: capitalize;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: $w;
+          }
+
+          h2 {
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 600;
+            font-size: 64px;
+            letter-spacing: 0.03em;
+            text-transform: capitalize;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: $y;
+          }
+        }
+
+        &__eki {
+          margin-top: 50px;
+          display: flex;
+
+          &--bid {
+            margin-right: 30px;
+            margin-bottom: 30px;
+            @include center();
+
+            &__tog {
+              position: relative;
+
+              img {
+                margin-right: 20px;
+              }
+
+              h6 {
+                font-family: 'Cormorant Upright', sans-serif;
+                font-weight: 700;
+                font-size: 23px;
+                letter-spacing: 0.04em;
+                color: #FFFFFF;
+                position: absolute;
+                left: 33px;
+                bottom: 34px;
+              }
+            }
+
+            &__lorem {
+              h1 {
+                font-family: 'Cormorant Upright', sans-serif;
+                font-weight: 700;
+                font-size: 23px;
+                letter-spacing: 0.04em;
+                text-transform: capitalize;
+                font-feature-settings: 'tnum' on, 'lnum' on;
+                color: #DCCA87;
+
+              }
+
+              p {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 175%;
+                letter-spacing: 0.04em;
+                color: #AAAAAA;
+                width: 190px;
+
+              }
+            }
+          }
+        }
+
+        &__ych {
+          display: flex;
+
+          &--bid {
+            margin-right: 30px;
+            @include center();
+
+            &__tog {
+              position: relative;
+
+              img {
+                margin-right: 20px;
+              }
+
+              h6 {
+                font-family: 'Cormorant Upright', sans-serif;
+                font-weight: 700;
+                font-size: 23px;
+                letter-spacing: 0.04em;
+                color: #FFFFFF;
+                position: absolute;
+                left: 33px;
+                bottom: 34px;
+              }
+            }
+
+            &--lorem {
+              h1 {
+                font-family: 'Cormorant Upright', sans-serif;
+                font-weight: 700;
+                font-size: 23px;
+                letter-spacing: 0.04em;
+                text-transform: capitalize;
+                font-feature-settings: 'tnum' on, 'lnum' on;
+                color: #DCCA87;
+
+              }
+
+              p {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 175%;
+                letter-spacing: 0.04em;
+                color: #AAAAAA;
+                width: 190px;
+
+              }
+            }
+          }
+        }
+      }
+
+      &--right {
+        position: relative;
+
+        img {
+          width: 400px;
+          height: 500px;
+        }
+
+        h4 {
+          font-family: 'Cormorant Upright', sans-serif;
+          position: absolute;
+          left: -63px;
+          bottom: -81px;
+          color: $fa;
+          font-size: 20em;
+          opacity: 0.8;
+        }
+      }
+
+
+    }
+  }
+
+  #for {
+    background: $s;
+    padding: 100px 0;
+
+    .for {
+      padding-bottom: 100px;
+
+      &--title {
+        @include column();
+
+        h5 {
+          font-family: 'Cormorant Upright', sans-serif;
+          font-weight: 700;
+          font-size: 23px;
+          color: #FFFFFF;
+        }
+
+        h1 {
+          font-family: 'Cormorant Upright', sans-serif;
+          padding-top: 20px;
+          font-weight: 600;
+          font-size: 64px;
+          color: $y;
+        }
+      }
+
+      &--glav {
+        padding-top: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__block {
+          margin: 0 20px;
+
+          &--text {
+            padding-top: 10px;
+            display: flex;
+
+            h4 {
+              font-family: 'Open Sans', sans-serif;
+              opacity: 0.7;
+              font-weight: 400;
+              font-size: 16px;
+              letter-spacing: 0.04em;
+              color: $fa;
+            }
+
+            h3 {
+              font-family: 'Open Sans', sans-serif;
+              padding-left: 210px;
+              opacity: 0.7;
+              font-weight: 400;
+              font-size: 16px;
+              letter-spacing: 0.04em;
+              color: $fa;
+            }
+          }
+
+          h1 {
+            font-family: 'Cormorant Upright', sans-serif;
+            padding: 30px 0;
+            opacity: 0.7;
+
+            font-weight: 400;
+            font-size: 32px;
+            letter-spacing: 0.04em;
+            text-decoration-line: underline;
+            text-transform: capitalize;
+            color: $y;
+          }
+
+          p {
+            font-family: 'Open Sans', sans-serif;
+            opacity: 0.7;
+
+            width: 412px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 175%;
+            letter-spacing: 0.04em;
+            color: $a;
+          }
+
+          h5 {
+            font-family: 'Cormorant Upright', sans-serif;
+            padding-top: 20px;
+            opacity: 0.7;
+
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: $y;
+          }
+        }
+      }
+
+      &--btn {
+        @include center();
+        padding-top: 60px;
+
+        button {
+          width: 136px;
+          height: 44px;
+          background: $y;
+          border: 2px solid $aB;
+          font-weight: 700;
+          color: $k;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+#galery {
+  background: url("/img/Mask Group (1).svg") no-repeat center/cover;
+  min-height: 100vh;
+  .galery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 120px;
+    &--title {
+      h5 {
+        font-weight: 700;
+        font-size: 23px;
+        color: #FFFFFF;
+      }
+      h1 {
+        padding-bottom: 20px;
+        font-weight: 600;
+        font-size: 64px;
+        color: #DCCA87;
+
+      }
+      p {
+        padding-bottom: 20px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        letter-spacing: 0.04em;
+        color: #AAAAAA;
+      }
+      button {
+        width: 136px;
+        height: 44px;
+        background: #DCCA87;
+        border: 1px solid #DCCA87;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.04em;
+        color: #0C0C0C;
+      }
+    }
+    &--img {
+      display: flex;
+      &__fg {
+        padding-left: 30px;
+        display: flex;
+        z-index: 1;
+        position: relative;
+        //width: 484px;
+        //height: 484px;
+        img {
+          transition: .5s ease-in-out;
+          width: 100%;
+          &:hover {
+            background: linear-gradient(207.55deg, rgba(0, 0, 0, 0.75) 1.5%, rgba(0, 0, 0, 0.64) 98.62%);
+            opacity: 0.4;
+          }
+        }
+        &--nav {
+          position: absolute;
+          bottom: 180px;
+          left: 160px;
+          z-index: -1;
+          a {
+
+            font-size: 50px;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+#new {
+    background: $k;
+    min-height: 260px;
+
+    .new {
+      position: relative;
+      @include center();
+
+      &--cribe {
+        @include column();
+        position: absolute;
+        top: 101px;
+        width: 950px;
+        height: 342px;
+        background: $k;
+        border: 1px solid rgba(220, 202, 135, 0.2);
+        box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+
+        &__title {
+          @include column();
+          margin-bottom: 80px;
+
+          h1 {
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 700;
+            font-size: 23px;
+            letter-spacing: 0.04em;
+            text-transform: capitalize;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: $w;
+          }
+
+          h2 {
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 130%;
+            letter-spacing: 0.03em;
+            text-transform: capitalize;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: $y;
+          }
+
+          h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: $w;
+          }
+        }
+
+        &__btn {
+          @include center();
+
+          input {
+            background: transparent;
+            width: 485px;
+            height: 44px;
+            border: 1px solid #F5EFDB;
+            font-family: 'Cormorant Upright', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            text-transform: capitalize;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+            color: $a;
+            padding: 0 20px;
+          }
+
+          button {
+            margin-left: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 32px;
+            gap: 10px;
+            width: 129px;
+            height: 44px;
+            background: #DCCA87;
+            border: 1px solid #DCCA87;
+          }
+        }
+      }
+    }
+  }
+
+  #footer {
+    background: url("/img/Mask Group (1).svg") no-repeat center/cover;
+    min-height: 35vh;
+    padding-top: 300px;
+
+    .footer {
+      margin-left: -90px;
+      position: relative;
+      @include around();
+
+      &--contact {
+        @include column();
+
+        h1 {
+          text-align: center;
+          font-family: 'Cormorant Upright', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 130%;
+          letter-spacing: 0.04em;
+          text-transform: capitalize;
+          font-feature-settings: 'tnum' on, 'lnum' on;
+          color: #F5EFDB;
+        }
+
+        h2 {
+          margin: 20px 0;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          letter-spacing: 0.04em;
+          color: $a;
+        }
+
+        p {
+          width: 144px;
+          height: 56px;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 175%;
+          letter-spacing: 0.04em;
+          color: $a;
+
+        }
+      }
+
+      &--best {
+        @include column();
+
+        h1 {
+          font-family: 'Cormorant Upright', sans-serif;
+          font-weight: 700;
+          font-size: 64px;
+          letter-spacing: 0.04em;
+          color: #DCCA87;
+
+        }
+
+        p {
+          padding-top: 20px;
+          text-align: center;
+          width: 438px;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          letter-spacing: 0.04em;
+          color: #FFFFFF;
+        }
+
+        img {
+          margin: 10px 0;
+        }
+
+        &__ion {
+          a {
+            font-size: 20px;
+            color: $w;
+            margin: 0 10px;
+          }
+        }
+      }
+
+      &--work {
+        @include column();
+
+        h1 {
+          font-family: 'Cormorant Upright', sans-serif;
+          font-weight: 400;
+          font-size: 32px;
+          letter-spacing: 0.04em;
+          text-transform: capitalize;
+          font-feature-settings: 'tnum' on, 'lnum' on;
+          color: $q;
+          margin-bottom: 10px;
+        }
+
+        h2 {
+          width: 160px;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 175%;
+          letter-spacing: 0.04em;
+          color: $a;
+          margin-bottom: 20px;
+        }
+
+        h3 {
+          width: 160px;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 175%;
+          letter-spacing: 0.04em;
+          color: $a;
+        }
+      }
+
+      &--top {
+        &__line {
+          position: absolute;
+          bottom: 57px;
+          right: -13px;
+          width: 61px;
+          height: 0;
+          border: 1px solid $y;
+          transform: rotate(-90deg);
+        }
+
+        h6 {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          font-family: 'Cormorant Upright', sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: #DCCA87;
+        }
+      }
+    }
+
+    h6 {
+      margin-top: 40px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: center;
+      letter-spacing: 0.04em;
+      color: #AAAAAA;
+    }
+  }
+
+
+
